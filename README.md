@@ -96,9 +96,9 @@ Responses returned from the api come as a `BoxCastResponse<T>` object with the f
 - **Remaining**
 - **Reset**
 
-**Headers** - a dictionary of all headers returned with the response
-**ResponseCode** - the HTTP response code returned
-**ResponsePhrase** - the response phrase returned
+**Headers** - a dictionary of all headers returned with the response  
+**ResponseCode** - the HTTP response code returned  
+**ResponsePhrase** - the response phrase returned  
 **Content** - the content returned deserialized into the supplied type for the generic response
 
 #### Error Handling
