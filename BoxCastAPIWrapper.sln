@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoxCastAPIWrapper", "BoxCastAPIWrapper\BoxCastAPIWrapper.csproj", "{DBAB5E33-01DD-4D9D-A2F2-663DE060C5AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DBAB5E33-01DD-4D9D-A2F2-663DE060C5AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBAB5E33-01DD-4D9D-A2F2-663DE060C5AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBAB5E33-01DD-4D9D-A2F2-663DE060C5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBAB5E33-01DD-4D9D-A2F2-663DE060C5AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A51CCD68-F529-47C0-852F-ACF16AC754E1}
+	EndGlobalSection
+EndGlobal
