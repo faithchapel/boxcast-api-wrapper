@@ -11,7 +11,7 @@ namespace BoxCastAPIWrapper.Models
     public class PasswordAuthenticationModel : Serializable, IAuthenticationModel
     {
         [JsonProperty(PropertyName = "grant_type")]
-        public string GrantType { get; set; } = "authorization_code";
+        public string GrantType { get; set; } = "password";
 
         [JsonProperty(PropertyName = "username")]
         public string Username { get; set; }
