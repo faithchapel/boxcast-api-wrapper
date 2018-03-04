@@ -15,5 +15,6 @@ namespace BoxCastAPIWrapper.Models
         
         [JsonProperty(PropertyName = "code")]
         public string Code { get; set; }
+
     }
 }
