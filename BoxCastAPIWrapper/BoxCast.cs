@@ -16,7 +16,7 @@ namespace BoxCastAPIWrapper
     {
         private static string clientId = "";
         private static string secret = "";
-        public static string oAuthTokenEndPoint = "https://login.boxcast.com/oauth2/token";
+        public static string oAuthTokenEndPoint = "https://auth.boxcast.com/oauth2/token";
         public static string apiEndPoint = "https://api.boxcast.com/";
         public static string apiVersionHeader = "";
 
@@ -58,6 +58,17 @@ namespace BoxCastAPIWrapper
         public static async Task Authenticate(string authCode)
         {
             var authModel = new AuthCodeAuthenticationModel() { Code = authCode };
+            token = await getToken(authModel);
+        }
+
+        /// <summary>
+        /// Authenticate with BoxCast using Client Credentials Flow
+        /// </summary>
+        /// <param name="scope"></param>
+        /// <returns></returns>
+        public static async Task Authenticate(BoxCastOAuthScope scope)
+        {
+            var authModel = new ClientCredentialsAuthenticationModel() { Scope = scope.ToString().ToLower() };
             token = await getToken(authModel);
         }
 
@@ -221,9 +232,7 @@ namespace BoxCastAPIWrapper
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", Base64Encode(clientId + ":" + secret));
 
-
-                string requestJson = authModel.Serialize();
-                var content = new StringContent(requestJson, Encoding.UTF8, "application/json");
+                var content = new FormUrlEncodedContent(authModel.ToDictionary());
 
                 HttpResponseMessage response = await client.PostAsync(new Uri(oAuthTokenEndPoint), content);
                 return (await handleResponse<TokenModel>(response)).Content;

@@ -18,5 +18,16 @@ namespace BoxCastAPIWrapper.Models
 
         [JsonProperty(PropertyName = "password")]
         public string Password { get; set; }
+
+        public Dictionary<string, string> ToDictionary()
+        {
+            var d = new Dictionary<string, string>();
+
+            d.Add("grant_type", GrantType);
+            d.Add("username", Username);
+            d.Add("password", Password);
+
+            return d;
+        }
     }
 }

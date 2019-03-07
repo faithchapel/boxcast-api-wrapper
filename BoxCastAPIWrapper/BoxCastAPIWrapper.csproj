@@ -6,16 +6,16 @@
     <Company>Faith Chapel</Company>
     <Description>A .NET wrapper for the BoxCast streaming platform API</Description>
     <Copyright>2018 Faith Chapel</Copyright>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/faithchapel/boxcast-api-wrapper</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/faithchapel/boxcast-api-wrapper/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/faithchapel/boxcast-api-wrapper</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>BoxCast Streaming</PackageTags>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <PackageReleaseNotes>Added client credentials OAuth flow</PackageReleaseNotes>
+    <Version>1.0.3</Version>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
     <NeutralLanguage>aa</NeutralLanguage>
   </PropertyGroup>
 

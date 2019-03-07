@@ -8,20 +8,25 @@ using System.Threading.Tasks;
 
 namespace BoxCastAPIWrapper.Models
 {
-    public class AuthCodeAuthenticationModel : Serializable, IAuthenticationModel
+    public class ClientCredentialsAuthenticationModel : Serializable, IAuthenticationModel
     {
         [JsonProperty(PropertyName = "grant_type")]
-        public string GrantType { get; set; } = "authorization_code";
-        
-        [JsonProperty(PropertyName = "code")]
-        public string Code { get; set; }
+        public string GrantType { get; set; } = "client_credentials";
+
+        [JsonProperty(PropertyName = "scope")]
+        public string Scope { get; set; }
+
+        public override string ToString()
+        {
+            return string.Format("grant_type={0}&scope={1}", GrantType, Scope);
+        }
 
         public Dictionary<string, string> ToDictionary()
         {
             var d = new Dictionary<string, string>();
 
             d.Add("grant_type", GrantType);
-            d.Add("code", Code);
+            d.Add("scope", Scope);
 
             return d;
         }

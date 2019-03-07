@@ -11,5 +11,7 @@ namespace BoxCastAPIWrapper.Interfaces
     {
         [JsonProperty(PropertyName = "grant_type")]
         string GrantType { get; set; }
+
+        Dictionary<string, string> ToDictionary();
     }
 }
