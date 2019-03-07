@@ -33,7 +33,7 @@ namespace BoxCastAPIWrapper
             string json = await httpResponse.Content.ReadAsStringAsync();
 
             //populate consistent response data
-            boxCastResponse.ETag = httpResponse.Headers.ETag.Tag;
+            boxCastResponse.ETag = httpResponse.Headers.ETag?.Tag;
             boxCastResponse.ResponseCode = httpResponse.StatusCode;
             boxCastResponse.ResponsePhrase = httpResponse.ReasonPhrase;
 
